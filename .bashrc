@@ -42,7 +42,7 @@ parse_git_branch() {
 }
 export the_branch="$(parse_git_branch)"
 
-export PS1='\n\[\e${cwdcolor}\][$PWD] \[\e${usercolor}\][\u]\[\e${host_name}\]${the_branch}\[\e${inputcolor}\] $ '
+export PS1='\n\[\e${cwdcolor}\][$PWD]\[\e${usercolor}\][\u]\[\e${host_name}\]$(parse_git_branch) \[\e${inputcolor}\] $ '
 
 # Aliases
 alias ls='ls -l --color'
